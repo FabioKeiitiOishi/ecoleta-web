@@ -8,6 +8,7 @@ import axios from 'axios';
 import './styles.css';
 
 import Dropzone from '../../components/Dropzone';
+import Modal from '../../components/Modal';
 import api from '../../services/api';
 import logo from '../../assets/logo.svg';
 
@@ -138,7 +139,6 @@ const CreatePoint = () => {
     }
     
     api.post('points', data);
-    alert('Ponto de coleta criado.');
 
     history.push('/');
   }
@@ -261,7 +261,7 @@ const CreatePoint = () => {
             ))}
           </ul>
         </fieldset>
-
+        <Modal />
         <button type="submit">
           Cadastrar ponto de coleta
         </button>
